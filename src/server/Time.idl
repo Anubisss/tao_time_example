@@ -1,0 +1,15 @@
+/**
+ *  @brief  This simple class just returns the time from the server.
+ */
+interface Time
+{
+    /**
+     *  @brief  Returns the current unix timestamp.
+     */
+    unsigned long long current_time();
+
+    /**
+     *  @brief  Shutdowns the server.
+     */
+    oneway void shutdown();
+};
