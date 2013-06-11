@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "client", "client.vcxproj", "{0595FBC7-8531-455E-94E5-AF5039D6E56B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "server.vcxproj", "{31C1519E-2B52-478F-AB75-4142001788AD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0595FBC7-8531-455E-94E5-AF5039D6E56B} = {0595FBC7-8531-455E-94E5-AF5039D6E56B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

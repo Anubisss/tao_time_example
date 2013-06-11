@@ -21,7 +21,7 @@
 #include <tao/ORB.h>
 #include <tao/Basic_Types.h>
 
-#include "TimeS.h"
+#include "idl/TimeS.h"
 
 /**
  *  @brief  This class is the implementation of the Time class which is

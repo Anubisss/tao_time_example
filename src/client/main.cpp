@@ -21,7 +21,7 @@
 
 #include <orbsvcs/orbsvcs/CosNamingC.h>
 
-#include "TimeC.h"
+#include "idl/TimeC.h"
 
 // this function should used with GetMSTimeDiff
 ACE_UINT32 GetMSTime() { return GetTickCount(); }

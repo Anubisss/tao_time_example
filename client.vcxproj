@@ -12,10 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\client\main.cpp" />
-    <ClCompile Include="src\client\TimeC.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\client\TimeC.h" />
+    <ClCompile Include="src\idl\TimeC.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0595FBC7-8531-455E-94E5-AF5039D6E56B}</ProjectGuid>
@@ -63,7 +60,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>libs\ACE_wrappers\TAO\;libs\ACE_wrappers\TAO\orbsvcs\;libs\ACE_wrappers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\;libs\ACE_wrappers\TAO\;libs\ACE_wrappers\TAO\orbsvcs\;libs\ACE_wrappers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -78,6 +75,10 @@ copy libs\debug\TAO_AnyTypeCoded.dll $(OutDir)
 copy libs\debug\TAO_CosNamingd.dll $(OutDir)
 copy libs\debug\TAO_Svc_Utilsd.dll $(OutDir)</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>cd src\idl
+call $(ProjectDir)libs\idl_compiler\tao_idl.exe $(ProjectDir)src\idl\Time.idl</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -88,7 +89,7 @@ copy libs\debug\TAO_Svc_Utilsd.dll $(OutDir)</Command>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>libs\ACE_wrappers\TAO\orbsvcs\;libs\ACE_wrappers\TAO\;libs\ACE_wrappers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\;libs\ACE_wrappers\TAO\orbsvcs\;libs\ACE_wrappers\TAO\;libs\ACE_wrappers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,6 +106,10 @@ copy libs\release\TAO_AnyTypeCode.dll $(OutDir)
 copy libs\release\TAO_CosNaming.dll $(OutDir)
 copy libs\release\TAO_Svc_Utils.dll $(OutDir)</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>cd src\idl
+call $(ProjectDir)libs\idl_compiler\tao_idl.exe $(ProjectDir)src\idl\Time.idl</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

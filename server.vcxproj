@@ -11,15 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\idl\TimeC.cpp" />
+    <ClCompile Include="src\idl\TimeS.cpp" />
     <ClCompile Include="src\server\main.cpp" />
-    <ClCompile Include="src\server\TimeC.cpp" />
     <ClCompile Include="src\server\TimeImpl.cpp" />
-    <ClCompile Include="src\server\TimeS.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\server\TimeC.h" />
     <ClInclude Include="src\server\TimeImpl.h" />
-    <ClInclude Include="src\server\TimeS.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{31C1519E-2B52-478F-AB75-4142001788AD}</ProjectGuid>
@@ -67,7 +65,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>libs\ACE_wrappers\TAO\orbsvcs\;libs\ACE_wrappers\TAO\;libs\ACE_wrappers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\;libs\ACE_wrappers\TAO\orbsvcs\;libs\ACE_wrappers\TAO\;libs\ACE_wrappers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -93,7 +91,7 @@ copy libs\debug\TAO_PortableServerd.dll $(OutDir)</Command>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>libs\ACE_wrappers\TAO\orbsvcs\;libs\ACE_wrappers\TAO\;libs\ACE_wrappers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\;libs\ACE_wrappers\TAO\orbsvcs\;libs\ACE_wrappers\TAO\;libs\ACE_wrappers\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
