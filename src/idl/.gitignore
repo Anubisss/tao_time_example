@@ -1,0 +1,5 @@
+# ignores everything
+*
+
+# except IDL files
+!*.idl
