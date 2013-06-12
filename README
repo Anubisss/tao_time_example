@@ -1,0 +1,63 @@
+                                tao_time_example
+===============================================================================
+
+
+
+   tao_time_example contains a server and a client. This project is a simple
+exmaple which purpose is to presents a basic introduction into TAO.
+   TAO (The ACE ORB) is a CORBA (Common Object Request Broker Architecture)
+implementation using the ACE (Adaptive Communication Environment) C++
+framework.
+   For more info check http://www.cs.wustl.edu/~schmidt/TAO.html
+                       http://www.corba.org/
+
+Some notes:
+    -    Time.idl (src/idl/Time.idl) is the file where the Time interface is
+      defined. This means that defination is programming language independent
+      so the server and the client can be written in different languages. The
+      implementation of the Time interface (class) should be in the server-side
+      code.
+    -    There is an IDL compiler there: libs/idl_compiler/tao_idl.exe This
+      compiler "compiles" the Time interface into C++ source files. With these
+      sources this IDL interface can be used in "any" C++ code. This IDL
+      compilation is automated in this project so Visual Studio take care
+      of that.
+
+How to use:
+    -   First of all the client have to find where (ip/port) is the server
+      running. This can be done simply via the CORBA Naming Service.
+    -   libs/naming_service/tao_cosnaming.exe
+      This is TAO's implementation of Naming Service. The most simple thing is
+      running the server, the client and the Naming Service in the same box.
+      In that way you should just run the Naming Service with "-m 1"
+      parameters. This enables multicast responses.
+        For more info about params just check README file in
+      Naming Service's directory.
+    -   Now just start server then client and that's all.
+        Should work as intended.
+
+
+Source code is available at: http://github.com/Anubisss/tao_time_example
+
+License: GNU GPLv3
+         COPYING file contains the license which should be distributed
+         with the software or visit http://www.gnu.org/licenses/gpl-3.0.html
+
+
+
+tao_time_example is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+tao_time_example is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with tao_time_example.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+===============================================================================

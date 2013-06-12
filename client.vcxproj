@@ -73,7 +73,8 @@
 copy libs\debug\TAOd.dll $(OutDir)
 copy libs\debug\TAO_AnyTypeCoded.dll $(OutDir)
 copy libs\debug\TAO_CosNamingd.dll $(OutDir)
-copy libs\debug\TAO_Svc_Utilsd.dll $(OutDir)</Command>
+copy libs\debug\TAO_Svc_Utilsd.dll $(OutDir)
+copy README $(OutDir)</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>cd src\idl
@@ -104,7 +105,8 @@ call $(ProjectDir)libs\idl_compiler\tao_idl.exe $(ProjectDir)src\idl\Time.idl</C
 copy libs\release\TAO.dll $(OutDir)
 copy libs\release\TAO_AnyTypeCode.dll $(OutDir)
 copy libs\release\TAO_CosNaming.dll $(OutDir)
-copy libs\release\TAO_Svc_Utils.dll $(OutDir)</Command>
+copy libs\release\TAO_Svc_Utils.dll $(OutDir)
+copy README $(OutDir)</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>cd src\idl
